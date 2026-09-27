@@ -1,16 +1,21 @@
-# React + Vite
+# React Product Load More
+A simple React project that fetches products from the DummyJSON API and displays them in a responsive grid.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Users can click the **Load More Products** button to load additional products.
 
-Currently, two official plugins are available:
+## Features
+- Fetch products from API
+- Load products in batches of 20
+- Load more product using button
+- prevent duplicates products
+- show a loading state
+- disable the button when all products are loaded
+- Responsive product grid
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+- React
+- JavaScript
+- CSS
+- FetchAPI
+- DummyJSON API
