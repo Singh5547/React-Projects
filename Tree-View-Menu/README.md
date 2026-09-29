@@ -1,16 +1,28 @@
-# React + Vite
+#  Tree View Menu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React-based Tree View Menu with support for nested and expandable menu items.
 
-Currently, two official plugins are available:
+The menu structure is created using a JavaScript data object, and React components recursively render nested menu items. Each menu item can contain children.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project also includes a modern animated sidebar with a hamburger menu, close button, and dark glassmorphism styling.
 
-## React Compiler
+##  Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-  Recursive Tree View Menu
+-  Expandable and collapsible nodes
+-  Multiple levels of nested menu items
+-  Animated hamburger menu
+-  Responsive sidebar navigation
+-  Modern dark/glassmorphism UI
+-  Interactive hover effects
+- Expand and collapse indicators
+- Reusable `MenuList` and `MenuItem` components
+- Data-driven menu structure
 
-## Expanding the ESLint configuration
+##  Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript (ES6+)
+- CSS3
+- React Hooks
+- Vite
