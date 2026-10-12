@@ -1,0 +1,14 @@
+body {
+    --background: #ffffff;
+    --color: #000000;
+
+    background: var(--background);
+    color: var(--color);
+    min-height: 100vh;
+    margin: 0;
+}
+
+body[data-theme="dark"] {
+    --background: #000000;
+    --color: #ffffff;
+}
