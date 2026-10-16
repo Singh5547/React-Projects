@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root {
+    font-family: 'Inter', sans-serif;
+    color: #f4f4ff;
+    background: #080812;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    --accent: #a78bfa;
+    --cyan: #22d3ee;
+    --gray: #9292ad;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #8b5cf6 #080812;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background:
+    radial-gradient(ellipse at 15% 5%, #5425a522, transparent 38%),
+    radial-gradient(ellipse at 90% 35%, #0e749022, transparent 35%),
+    #080812;
+}
+
+.status-message {
+    width: min(100% - 40px, 1000px);
+    margin: 20px auto;
+    color: #a78bfa;
+    text-align: center;
+}
+
+.error-message {
+    color: #fca5a5;
+}
+
+h1 {
+    width: min(100% - 40px, 1000px);
+    margin: 0 auto;
+    padding: 90px 0 42px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: -0.075em;
+    line-height: 1.05;
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(
+            115deg,
+            #ffffff 15%,
+            #c4b5fd 48%,
+            #67e8f9 90%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: fade-in 0.9s ease both;
+}
+
+h1::after {
+    content: 'SCROLL • EXPLORE • DISCOVER';
+    display: block;
+    margin-top: 22px;
+    color: var(--gray);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    line-height: 1.5;
+}
+
+.top-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 14px 0;
+    background: rgb(8 8 18 / 78%);
+    border-top: 1px solid rgb(255 255 255 / 5%);
+    border-bottom: 1px solid rgb(255 255 255 / 8%);
+}
+
+.scroll-progress-tracking-container {
+    width: min(100% - 48px, 1000px);
+    height: 6px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50px;
+    background: #ffffff12;
+    box-shadow: inset 0 1px 4px #00000080;
+}
+
+.current-progress-bar {
+    position: relative;
+    height: 100%;
+    width: 0%;
+    border-radius: inherit;
+    background: linear-gradient(
+            90deg,
+            #7c3aed,
+            #a78bfa 45%,
+            #22d3ee
+    );
+    box-shadow:
+            0 0 10px #a78bfa99,
+            0 0 25px #8b5cf677;
+    transition: width 80ms linear;
+    will-change: width;
+}
+
+.data-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: min(100% - 40px, 1000px);
+    margin: 0 auto;
+    padding: 30px 0 100px;
+    counter-reset: product;
+}
+
+.data-container p {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 112px;
+    padding: 26px 25px 26px 65px;
+    overflow: hidden;
+    border: 1px solid #ffffff10;
+    border-radius: 20px;
+    background: linear-gradient(
+            145deg,
+            rgb(255 255 255 / 6%),
+            rgb(255 255 255 / 2%)
+    );
+    color: #e8e8f6;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.7;
+    box-shadow: 0 8px 30px #00000016;
+    backdrop-filter: blur(12px);
+    counter-increment: product;
+    animation: card-enter 0.65s both;
+    transition:
+            transform 250ms ease,
+            border-color 250ms ease,
+            background 250ms ease,
+            box-shadow 250ms ease;
+}
+
+.data-container p::before {
+    content: counter(product, decimal-leading-zero);
+    position: absolute;
+    left: 22px;
+    color: #a78bfa;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.data-container p:hover {
+    transform: translateY(-5px);
+    border-color: #a78bfa66;
+    background: linear-gradient(
+            145deg,
+            #a78bfa14,
+            #22d3ee08
+    );
+    box-shadow:
+            0 15px 40px #00000030,
+            0 0 0 1px #a78bfa0a;
+}
+
+.data-container p:hover::after {
+    opacity: 0.28;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
